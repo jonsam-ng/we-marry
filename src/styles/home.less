@@ -1,6 +1,7 @@
 @import url(../styles/constants.less);
 
 @top-shift: @header-height + 10px;
+@h-padding: 120px;
 
 .home-page {
   .pinner {
@@ -8,7 +9,7 @@
     height: 873px;
     width: 100%;
     overflow: hidden;
-    padding: 0 120px;
+    padding: 0 @h-padding;
     margin: 0 auto;
     position: relative;
 
@@ -98,6 +99,41 @@
       bottom: 50px;
       width: 489px;
       height: 489px;
+    }
+  }
+
+  .bubbles {
+    position: relative;
+    background: url(/assets/images/waves.png) no-repeat 50%;
+    background-attachment: fixed;
+    padding: 0 @h-padding;
+    margin: 0 auto;
+    position: relative;
+    height: 764px;
+    display: flex;
+    
+    .bg {
+      position: absolute;
+      width: 744.56px;
+      height: 692px;
+      left: 256px;
+      top: 46px;
+      border-radius: 50%;
+      background: linear-gradient(142.97deg,rgba(255,230,0,.21) 17.43%,rgba(239,60,210,.22) 73.23%);
+      opacity: .7;
+      filter: blur(165.36px);
+      pointer-events: none;
+      z-index: 100;
+    }
+
+    .left {
+      flex: 1 1;
+      position: relative;
+      .left-inner {
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
     }
   }
 }

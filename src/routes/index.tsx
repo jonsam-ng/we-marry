@@ -1,5 +1,12 @@
-import { component$, useStylesScoped$ } from "@builder.io/qwik";
+import {
+	component$,
+	useSignal,
+	useStylesScoped$,
+	useVisibleTask$,
+} from "@builder.io/qwik";
+import { isBrowser } from "@builder.io/qwik/build";
 import type { DocumentHead } from "@builder.io/qwik-city";
+import { loveBubbles } from "~/utils";
 import styles from "~/styles/home.less?inline";
 
 const configs = {
@@ -25,6 +32,22 @@ const configs = {
 
 export default component$(() => {
 	useStylesScoped$(styles);
+	const circleDom = useSignal<Element>();
+
+	useVisibleTask$(() => {
+		if (isBrowser) {
+			//@ts-ignore
+			if (window.mojs) {
+				loveBubbles(circleDom.value as any);
+				return;
+			}
+			import("@mojs/core").then((m) => {
+				// @ts-ignore
+				window.mojs = m;
+				loveBubbles(circleDom.value as any);
+			});
+		}
+	});
 
 	return (
 		<div class="home-page">
@@ -50,6 +73,16 @@ export default component$(() => {
 				</div>
 				<div class="bg"></div>
 				<img class="flower" src="/assets/images/flower.svg" />
+			</div>
+
+			{/* Bubbles */}
+			<div class="bubbles">
+				<div class="left">
+					<div class="left-inner" ref={circleDom}></div>
+					<div class="details"></div>
+				</div>
+				<div class="right"></div>
+				<div class="bg"></div>
 			</div>
 		</div>
 	);

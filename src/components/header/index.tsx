@@ -1,5 +1,5 @@
 import { component$, useStyles$ } from "@builder.io/qwik";
-import { useLocation, type DocumentHead } from "@builder.io/qwik-city";
+import { useLocation } from "@builder.io/qwik-city";
 import { Button } from "../index";
 import { IconHeart } from "../icons";
 import configs from "./configs";
@@ -47,9 +47,3 @@ export default component$(() => {
 		</header>
 	);
 });
-
-export const head: DocumentHead = ({ head }: any) => {
-	return {
-		title: `${head.title} | WeMarry`,
-	};
-};

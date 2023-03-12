@@ -42,6 +42,7 @@
 		"vite-tsconfig-paths": "3.5.0"
 	},
 	"dependencies": {
+		"@mojs/core": "^1.4.0",
 		"ismobilejs": "^1.1.1",
 		"normalize.css": "^8.0.1",
 		"vanilla-back-to-top": "^7.2.1"

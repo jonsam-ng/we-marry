@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@builder.io/qwik': 0.21.0
   '@builder.io/qwik-city': 0.5.3
+  '@mojs/core': ^1.4.0
   '@netlify/edge-functions': ^2.0.0
   '@types/eslint': 8.21.1
   '@types/node': ^18.14.0
@@ -24,6 +25,7 @@ specifiers:
   vite-tsconfig-paths: 3.5.0
 
 dependencies:
+  '@mojs/core': 1.4.0
   ismobilejs: 1.1.1
   normalize.css: 8.0.1
   vanilla-back-to-top: 7.2.1
@@ -83,6 +85,13 @@ packages:
     dependencies:
       '@babel/types': 7.21.2
     dev: true
+
+  /@babel/runtime/7.21.0:
+    resolution: {integrity: sha512-xwII0//EObnq89Ji5AKYQaRYiW/nZ3llSv29d49IuxPhKbtJoLP+9QUUZ4nVragQVtaVGeZrpB+ZtG/Pdy/POw==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      regenerator-runtime: 0.13.11
+    dev: false
 
   /@babel/types/7.21.2:
     resolution: {integrity: sha512-3wRZSs7jiFaB8AjxiiD+VqN5DTG2iRvJGQ+qYFrs/654lg6kGTQWIOFjlBo5RaXuAZjBmP3+OQH4dmhqiiyYxw==}
@@ -585,6 +594,13 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@mojs/core/1.4.0:
+    resolution: {integrity: sha512-/dPrnmvdosCl0sessK79VkPd3c52SuiBNyTRC4A+icNymhgA0tnNzQTEUYfkY4zsJ64da2CnEFzP7DQqEtSStA==}
+    engines: {node: ^18, npm: ^8}
+    dependencies:
+      '@babel/runtime': 7.21.0
+    dev: false
 
   /@mrmlnc/readdir-enhanced/2.2.1:
     resolution: {integrity: sha512-bPHp6Ji8b41szTOcaP63VlnbbO5Ny6dwAATtY6JTjh5N2OLrb5Qk/Th5cRkRQhkWCt+EJsYrNB0MiL+Gpn6e3g==}
@@ -8260,6 +8276,10 @@ packages:
       sucrase: 3.29.0
       tslib: 1.14.1
     dev: true
+
+  /regenerator-runtime/0.13.11:
+    resolution: {integrity: sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==}
+    dev: false
 
   /regex-not/1.0.2:
     resolution: {integrity: sha512-J6SDjUgDxQj5NusnOtdFxDwN/+HWykR8GELwctJ7mdqhcyy1xEc4SRFHUXvxTp661YaVKAjfRLZ9cCqS6tn32A==}
