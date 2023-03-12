@@ -1,0 +1,9 @@
+{
+	"$schema": "https://json.schemastore.org/web-manifest-combined.json",
+	"name": "WeMarry.today",
+	"short_name": "WeMarry",
+	"start_url": ".",
+	"display": "standalone",
+	"background_color": "#fff",
+	"description": "A Qwik project app."
+}
