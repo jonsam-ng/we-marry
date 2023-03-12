@@ -12,3 +12,44 @@ a {
   }
 }
 
+ul {
+  list-style: none;
+  padding-left: 32px;
+  li {
+    margin-bottom: 10px;
+    font-weight: 400;
+    position: relative;
+  }
+  &.custom {
+    padding-left: 0;
+  }
+  &:not(.custom) li {
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: -30px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      background-image: url(/assets/images/heart.png);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+
+#back-to-top {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	svg {
+		width: 24px;
+		height: 24px;
+		margin: 0;
+		padding: 0;
+	}
+}

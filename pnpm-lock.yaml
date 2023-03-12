@@ -11,6 +11,7 @@ specifiers:
   '@typescript-eslint/parser': 5.54.0
   eslint: 8.35.0
   eslint-plugin-qwik: 0.21.0
+  ismobilejs: ^1.1.1
   less: ^4.1.3
   netlify-cli: ^12.0.11
   node-fetch: 3.3.0
@@ -18,11 +19,14 @@ specifiers:
   prettier: 2.8.4
   typescript: 4.9.5
   undici: 5.20.0
+  vanilla-back-to-top: ^7.2.1
   vite: 4.1.4
   vite-tsconfig-paths: 3.5.0
 
 dependencies:
+  ismobilejs: 1.1.1
   normalize.css: 8.0.1
+  vanilla-back-to-top: 7.2.1
 
 devDependencies:
   '@builder.io/qwik': 0.21.0_undici@5.20.0
@@ -5695,6 +5699,10 @@ packages:
     resolution: {integrity: sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=}
     dev: true
 
+  /ismobilejs/1.1.1:
+    resolution: {integrity: sha512-VaFW53yt8QO61k2WJui0dHf4SlL8lxBofUuUmwBo0ljPk0Drz2TiuDW4jo3wDcv41qy/SxrJ+VAzJ/qYqsmzRw==}
+    dev: false
+
   /isobject/2.1.0:
     resolution: {integrity: sha1-8GVWEJaj8dou9GJy+BXIQNh+DIk=}
     engines: {node: '>=0.10.0'}
@@ -9701,6 +9709,10 @@ packages:
     dependencies:
       builtins: 5.0.1
     dev: true
+
+  /vanilla-back-to-top/7.2.1:
+    resolution: {integrity: sha512-AZiYYmoe0RTbzTQs/reoXyCVqT20+cerQOsnmM/WYPJRwOAZjH0GRaWLw8QKhXcpch1UsLJHg7IwbvvzUPrcLg==}
+    dev: false
 
   /vary/1.1.2:
     resolution: {integrity: sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=}

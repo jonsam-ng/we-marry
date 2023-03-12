@@ -1,15 +1,15 @@
-import { component$, Slot } from '@builder.io/qwik';
-import Footer from '~/components/footer/footer';
-import Header from '~/components/header/header';
+import { component$, Slot } from "@builder.io/qwik";
+import { Header, Footer, GlobalMixins } from "~/components";
 
 export default component$(() => {
-  return (
-    <>
-      <Header />
-      <main>
-        <Slot />
-      </main>
-      <Footer />
-    </>
-  );
+	return (
+		<>
+			<Header />
+			<main>
+				<Slot />
+			</main>
+			<Footer />
+			<GlobalMixins />
+		</>
+	);
 });

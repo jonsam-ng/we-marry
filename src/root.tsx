@@ -4,8 +4,8 @@ import {
 	RouterOutlet,
 	ServiceWorkerRegister,
 } from "@builder.io/qwik-city";
-import { RouterHead } from "./components/router-head/router-head";
-import styles from "./styles/index.less?inline";
+import { RouterHead } from "~/components/router-head/router-head";
+import styles from "~/styles/index.less?inline";
 import "normalize.css";
 import "./global.css";
 

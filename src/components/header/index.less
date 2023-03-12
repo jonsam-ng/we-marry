@@ -3,16 +3,18 @@
 header {
   position: sticky;
   top: 0;
-  z-index: @header-bg-zIndex;
+  z-index: @header-zIndex;
   display: grid;
   grid-template-columns: minmax(130px, auto) 1fr;
   gap: 30px;
-  height: @header-bg-height;
+  height: @header-height;
   width: 100%;
-  padding: 0px @header-bg-padding;
+  padding: 0px @header-padding;
   background-color: @header-bg-color;
   overflow: hidden;
   align-items: center;
+  backdrop-filter: blur(4px);
+  transition: all 1s ease-out;
 
   a {
     text-decoration: none;
@@ -23,6 +25,7 @@ header {
       img {
         width: 100%;
         opacity: 0.8;
+        transition: opacity 0.3s ease-in-out;
         &:hover {
           opacity: 1;
         }
@@ -40,6 +43,7 @@ header {
       padding: 5px 15px;
       color: #fff;
       opacity: 0.8;
+      transition: opacity 0.3s ease-in-out;
 
       &:hover, &.active {
         opacity: 1;
