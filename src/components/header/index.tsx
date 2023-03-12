@@ -48,7 +48,7 @@ export default component$(() => {
 	);
 });
 
-export const head: DocumentHead<EndpointData> = ({ head }) => {
+export const head: DocumentHead = ({ head }: any) => {
 	return {
 		title: `${head.title} | WeMarry`,
 	};

@@ -19,6 +19,7 @@ export default component$(() => {
 				import("ismobilejs").then((m) => {
 					const isMobile = m.default;
 					if (window) {
+						// @ts-ignore
 						window.isMobile = isMobile(window.navigator);
 					}
 				});
