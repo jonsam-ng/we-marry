@@ -1,0 +1,60 @@
+@import url(../../styles/constants.less);
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: @header-bg-zIndex;
+  display: grid;
+  grid-template-columns: minmax(130px, auto) 1fr;
+  gap: 30px;
+  height: @header-bg-height;
+  width: 100%;
+  padding: 0px @header-bg-padding;
+  background-color: @header-bg-color;
+  overflow: hidden;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+
+    &.logo {
+      display: block;
+      width: @logo-common-width;
+      img {
+        width: 100%;
+        opacity: 0.8;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  nav {
+    text-align: right;
+    font-size: 0.9rem;
+    justify-content: space-between;
+    display: flex;
+    a {
+      display: inline-block;
+      padding: 5px 15px;
+      color: #fff;
+      opacity: 0.8;
+
+      &:hover, &.active {
+        opacity: 1;
+      }
+    }
+  }
+
+  .actions {
+    .action {
+      svg {
+        color: #fff;
+      }
+    }
+    button {
+      margin-left: 1.6rem;
+    }
+  }
+}

@@ -4,6 +4,6 @@
 	"short_name": "WeMarry",
 	"start_url": ".",
 	"display": "standalone",
-	"background_color": "#fff",
-	"description": "A Qwik project app."
+	"background_color": "#F41971",
+	"description": "A lovely website that belongs to us to commemorate the wedding."
 }

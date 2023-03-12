@@ -1,0 +1,22 @@
+@import url(../../styles/constants.less);
+
+.button {
+  appearance: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 2rem;
+  border: none;
+  outline: none;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  &:hover {
+    font-weight: 800;
+  }
+  cursor: pointer;
+
+  &.primary{
+    background-color: lighten(@theme-accent-color, 42%);
+    color: @theme-accent-color;
+    box-shadow: 0 0 1em lighten(@theme-accent-color, 45%);
+    border: 2px solid fade(@theme-accent-color, 50%);
+  }
+}
