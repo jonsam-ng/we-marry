@@ -1,6 +1,7 @@
 import { component$, useStyles$ } from "@builder.io/qwik";
 import { useLocation } from "@builder.io/qwik-city";
 import { Button } from "../index";
+import { IconHeart } from "../icons";
 import configs from "./configs";
 import styles from "./header.less?inline";
 
@@ -40,7 +41,7 @@ export default component$(() => {
 							{icon}
 						</a>
 					))}
-					<Button>祝福我们</Button>
+					<Button className="blessing">{IconHeart}祝福我们</Button>
 				</div>
 			</nav>
 		</header>

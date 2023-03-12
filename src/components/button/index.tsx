@@ -6,8 +6,8 @@ export default component$(
 		type = "primary",
 		className = "",
 	}: {
-		type: "primary";
-		className: string;
+		type?: "primary";
+		className?: string;
 	}) => {
 		useStyles$(styles);
 
