@@ -6,7 +6,7 @@ import {
 } from "@builder.io/qwik";
 import { isBrowser } from "@builder.io/qwik/build";
 import type { DocumentHead } from "@builder.io/qwik-city";
-import { loveBubbles } from "~/utils";
+import { loveBubbles, daysFrom } from "~/utils";
 import styles from "~/styles/home.less?inline";
 
 const configs = {
@@ -28,6 +28,8 @@ const configs = {
 			target: "_blank",
 		},
 	],
+	fromDay: "2023年1月26日",
+	days: daysFrom("2023/1/26", new Date()),
 };
 
 export default component$(() => {
@@ -79,11 +81,20 @@ export default component$(() => {
 			<div class="bubbles">
 				<div class="left">
 					<div class="left-inner" ref={circleDom}></div>
-					<div class="details"></div>
+					<div class="details">
+						<p class="heading">我们已经相爱了</p>
+						<p class="days">
+							{configs.days}
+							<span class="day">天</span>
+						</p>
+						<p class="tail">从{configs.fromDay}开始</p>
+					</div>
 				</div>
 				<div class="right"></div>
 				<div class="bg"></div>
 			</div>
+
+			{/* Board */}
 		</div>
 	);
 });

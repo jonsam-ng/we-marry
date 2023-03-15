@@ -41,7 +41,7 @@ export default component$(() => {
 							{icon}
 						</a>
 					))}
-					<Button className="blessing">{IconHeart}祝福我们</Button>
+					<Button class="blessing">{IconHeart}祝福我们</Button>
 				</div>
 			</nav>
 		</header>
