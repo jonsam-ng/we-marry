@@ -41,7 +41,8 @@ export default component$(() => {
 							{icon}
 						</a>
 					))}
-					<Button class="blessing">{IconHeart}祝福我们</Button>
+					{/* @ts-ignore */}
+					<Button className="blessing">{IconHeart}祝福我们</Button>
 				</div>
 			</nav>
 		</header>
