@@ -1,3 +1,6 @@
+import { useSignal, useVisibleTask$ } from "@builder.io/qwik";
+import { isBrowser } from "@builder.io/qwik/build";
+
 export const loveBubbles = (dom: HTMLElement) => {
 	//@ts-ignore
 	const mojs = window.mojs as any;
@@ -95,3 +98,24 @@ export const loveBubbles = (dom: HTMLElement) => {
 		mousePos.y = e.pageY;
 	});
 };
+
+export function useBubbles() {
+	const circleDom = useSignal<Element>();
+
+	useVisibleTask$(() => {
+		if (isBrowser) {
+			//@ts-ignore
+			if (window.mojs) {
+				loveBubbles(circleDom.value as any);
+				return;
+			}
+			import("@mojs/core").then((m) => {
+				// @ts-ignore
+				window.mojs = m;
+				loveBubbles(circleDom.value as any);
+			});
+		}
+	});
+
+	return { circleDom };
+}

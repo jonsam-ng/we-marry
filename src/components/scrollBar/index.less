@@ -1,0 +1,29 @@
+.scrollbar{
+  height: 22px;
+  color: #fff;
+  font-weight: 700;
+  overflow: hidden;
+  .inner {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 4500px;
+    animation: scrollx 4s linear infinite;
+    span {
+      padding: 0 20px;
+      font-size: 12px;
+      line-height: 22px;
+      // width: 300px;
+      font-style: italic;
+    }
+
+    @keyframes scrollx {
+      0% {
+        margin-left: 0;
+      }
+    
+      to {
+        margin-left: -250px;
+      }
+    }
+  }
+}

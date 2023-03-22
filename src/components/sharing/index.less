@@ -1,0 +1,35 @@
+@import url(../../styles/constants.less);
+
+.sharing {
+  margin: 90px auto 30px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+  
+  li {
+    width: 96px;
+    height: 96px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    color: #09244b;
+    transition: all .5s ease-in-out;
+    line-height: 30px;
+    color: #8491a5;
+    font-size: 12px;
+    text-align: center;
+    background: #fff;
+    margin: 0 20px;
+    cursor: pointer;
+    .icon {
+      font-size: 28px;
+      color: #000;
+    }
+    &:hover {
+      background: @theme-accent-color;
+      color: #fff;
+    }
+  }
+}
